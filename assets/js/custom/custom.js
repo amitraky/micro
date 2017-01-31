@@ -159,5 +159,79 @@ function user_detail(userid,fx_name)
 }
 
 
+function add_rank()
+{
+	var new_rank = jQuery('#new_rank').val();
+	var new_level = jQuery('#new_level').val();
+	var new_designation = jQuery('#new_designation').val();
+	var new_status = jQuery('#new_status').val();
+	
+	
+    jQuery.ajax({
+      type: "POST", 
+      url: jQuery('#add_rank_url').val(), 
+      data:{'new_rank':new_rank,'new_level':new_level,'new_designation':new_designation,'new_status':new_status},
+      success: function(response){
+			alert(response);
+			
+    },
+    error: function(){alert('error');}
+    });
+}
+
+function delete_rank(id)
+{
+jConfirm('Can you confirm this?', 'Confirmation Dialog', function(r) {
+
+   if(r == true){
+		  jQuery.ajax({
+		  type: "POST", 
+		  url: jQuery('#delete_rank').val(), 
+		  data:{'id':id},		  
+		  success: function(response){
+		   window.location.reload();
+		  },
+		  error: function(){alert('error');}
+		});
+	}
+	});
+}
+
+function edite_rank(id)
+{
+	var td = document.querySelectorAll('#id'+id+' td');
+for(var i=1;i<=3;i++){	
+ 
+ td[i].innerHTML =  '<input type="text" value="'+td[i].innerHTML+'" style="border : 1px solid red;">';
+}
+jQuery('#b'+id).text('UPDATE');
+
+jQuery(td[6]+' .edit_icn').attr('onclick','');
+
+  
+}
+
+function update_rank(type,id)
+{     
+jConfirm('Can you confirm this?', 'Confirmation Dialog', function(r) {
+
+   if(r == true){
+		  jQuery.ajax({
+		  type: "POST", 
+		  url: jQuery('#update_location_id').val(), 
+		  data:{'type':type ,'new_name':jQuery('#'+type+'name'+id).val(),'id':id,'new_status':jQuery('#'+type+'status'+id).val()},	  
+		  success: function(response){
+				window.location.reload();
+		  },
+		  error: function(){alert('error');}
+		});
+	}
+	});
+
+}
+
+
+
+
 
 
