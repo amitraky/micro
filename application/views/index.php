@@ -52,6 +52,7 @@ function auto_logout() {
 	// store all css links in one array
 	$css = array(
 				  'css/style.default.css',
+				  'css/custom.css',
 	);
 	//removed all blank links and dumplicacy
 	$hrefs = array_uniques(array_filters($css));
