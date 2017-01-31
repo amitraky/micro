@@ -75,6 +75,18 @@
 		}
 		
 		
+	public function ranks()
+	{
+	  return $this->db->order_by('m3_1_id','DESC')->get('m3_1_ranks')->result();
+	}
+	
+	  
+	  //cnd is array
+	  public function delete($table,$cnd)
+	  {
+	     return $this->db->delete($table,$cnd);
+	  }
+		
 		
 		
 		
