@@ -67,6 +67,15 @@ class Master extends CI_Controller
 	  }
 	}
 	
+	
+	
+	public function insert($fields,$table)
+	{
+	      $data = $this->get_fields_value( $fields);
+		  $res = $this->Master->insert($table,$data);
+		  $this->send_response_status($res);
+	}
+	
 	  
 ########################################### PUBLIC FUNCTIONS ###########################################	  
 	  
@@ -94,21 +103,15 @@ class Master extends CI_Controller
 	public function add_new_city()
 	{
 		  $fields =  array('m1_2_state_id' =>'new_state','m1_3_name'=>'new_city','m1_3_status'=>'new_status'); 
-		  $data = $this->get_fields_value( $fields);
-		  $res = $this->Master->insert('m1_3_cities',$data);
-		  $this->send_response_status($res);
-		   echo 'Bla';// Blan is nothing
+		  $this->insert($fields,'m1_3_cities');
+		   echo 'Go';// Go as keyword 
 		   
 	}
 	public function add_new_state()
 	{
 		  $fields =  array('m1_1_country_id' =>'new_country','m1_2_name'=>'new_state','m1_2_status'=>'state_status'); 
-		
-		  $data = $this->get_fields_value( $fields);
-		  $res = $this->Master->insert('m1_2_states',$data);
-		  $this->send_response_status($res);
-		   echo 'Bla';// Blan is nothing
-		   
+		  $this->insert($fields,'m1_2_states');
+		   echo 'Go';// Go as keyword 
 	}
 	
 	
@@ -129,7 +132,7 @@ class Master extends CI_Controller
 	{
 	  $res = $this->Master->delete_location(post('type'),post('location_id')); 
 	  $this->send_response_status($res);
-	   echo 'Bla';// Blan is nothing
+	    echo 'Go';// Go as keyword 
 	 
 	}
 	   
@@ -145,7 +148,7 @@ class Master extends CI_Controller
 	  }
 	  $res = $this->Master->update_location(post('type'),$data,post('id')); 
 	  $this->send_response_status($res);
-	   echo 'Bla';// Blan is nothing
+	   echo 'Go';// Go as keyword 
 	 
 	}  
 	
@@ -156,10 +159,31 @@ class Master extends CI_Controller
 
 public function rank()
 {
-  
+  $res = $this->Master->ranks(); 
+  $this->data['ranks'] = $res; 	
+  $this->data['page'] = 'Master/Mst_rank';
+  view('index',$this->data);
    
 }
 
+public function add_new_rank()
+{
+      $fields = array(    'm3_1_rank'=>'new_rank',
+						  'm3_1_level'=>'new_level',
+						  'm3_1_designation'=>'new_designation',
+						  'm3_1_description'=>'new_description',
+						  'm3_1_status'=>'new_status'
+					 );
+	  $this->insert($fields,'m3_1_ranks');
+	   echo 'Go';// Go as keyword 
+}
+
+
+public function delete_rank()
+{
+  $this->Master->delete('m3_1_ranks',array('m3_1_id'=>post('id')));
+  echo 'GO';
+}
 
 ### END RANK ###
 
