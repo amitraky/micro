@@ -18,9 +18,9 @@ Micro Management
 
    *D. Server Management*	
    
-     *1. Apache Version :2.4.9* 
+     1. Apache Version :2.4.9
 
-     *2. PHP Version :5.5.12*
+     2. PHP Version :5.5.12
 
    	 
 	 
