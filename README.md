@@ -7,14 +7,17 @@ Micro Management
 *Language  Configuration*
   
    *A. View Configuration*
-     *1.HTML*
-	 *2.CSS*
-	 *3.JS*
+   
+     1. HTML
+	 2. CSS
+	 3. JS
    *B. Backend Configuration*
-     *1.PHP*
-	 *2.JS*
+   
+     1. PHP
+	 2. JS
    *C. Database Configuration*
-     *1.MySQL Version :5.6.17*
+   
+     1. MySQL Version :5.6.17
 
    *D. Server Management*	
    
@@ -42,7 +45,7 @@ Micro Management
   
 **B.Database Management** 
   
-  *Aboout Mysql *
+  *Aboout Mysql*
   
   
 
