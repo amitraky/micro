@@ -24,7 +24,7 @@ Micro Management
 
    	 
 	 
-** A. View Management  **
+**A. View Management**
 
 *About HTML Code*
 
@@ -33,14 +33,14 @@ Micro Management
 *About JS Code*	
 
 
-** B.Backend Management **
+**B.Backend Management**
   
-  *Abount PHP *
+  *Abount PHP*
   
-  *Abount JS *
+  *Abount JS*
   
   
-** B.Backend Management ** 
+**B.Backend Management** 
   
   *Aboout Mysql *
   
