@@ -201,12 +201,11 @@ function edite_rank(id)
 {
 	var td = document.querySelectorAll('#id'+id+' td');
 for(var i=1;i<=3;i++){	
- 
- td[i].innerHTML =  '<input type="text" value="'+td[i].innerHTML+'" style="border : 1px solid red;">';
+  td[i].innerHTML =  '<input type="text" value="'+td[i].innerHTML+'" style="border : 1px solid red;">';
 }
 jQuery('#b'+id).text('UPDATE');
 
-jQuery(td[6]+' .edit_icn').attr('onclick','');
+jQuery(td[5]).innerHTML = '';
 
   
 }
