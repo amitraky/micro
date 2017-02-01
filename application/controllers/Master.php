@@ -20,7 +20,6 @@ class Master extends CI_Controller
 		 $this->load->model('User_model','User');
 		 $this->load->model('Master_model','Master');
 		 $this->data['active'] = uri(2);
-			
 		}
 		
 		
@@ -187,6 +186,31 @@ public function delete_rank()
 
 ### END RANK ###
 
+
+### PIN ###
+
+  public function pin()
+  {
+    $res = $this->Master->ranks(); 
+    $this->data['ranks'] = $res; 	
+    $this->data['page'] = 'Master/Mst_pin';
+     view('index',$this->data);
+  }
+
+  public function add_new_pin()
+  {
+   //
+  }
+
+  
+  public function delete_pin()
+  {
+   //
+  }
+  
+ 
+  
+### END PIN ###
 
 
 

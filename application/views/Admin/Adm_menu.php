@@ -2,12 +2,12 @@
 <div class="vernav2 iconmenu">
   <ul>
   
-  <li class="<?php if($active == 'location'|| $active == 'rank'||$active == 'deactive_users') echo 'current';  ?>"><a href="#Master" class="elements">Master</a> <span class="arrow"></span>
+  <li class="<?php if($active == 'location'|| $active == 'rank'|| $active == 'pin' ) echo 'current';  ?>"><a href="#Master" class="elements">Master</a> <span class="arrow"></span>
       <ul id="Master">
        
         <li class="<?php if($active == 'location') echo 'current'; ?>"><a href="<?php echo base_url('Master/location')?>">Location</a></li>
         <li class="<?php if($active == 'rank') echo 'current'; ?>"><a href="<?php echo base_url('Master/rank')?>">Rank</a></li>
-        
+        <li class="<?php if($active == 'pin') echo 'current'; ?>"><a href="<?php echo base_url('Master/pin')?>">Pin</a></li>
         <li class="<?php if($active == 'branch') echo 'current'; ?>"><a href="wizard.html">Branch</a></li>
         <li class="<?php if($active == 'assets') echo 'current'; ?>"><a href="editor.html">Assets</a></li>
         <li class="<?php if($active == 'biabilies') echo 'current'; ?>"><a href="editor.html">Liabilies</a></li>
@@ -15,7 +15,7 @@
       </ul>
     </li>
   
-   <li class="<?php if($active == 'profile'|| $active == 'setting'|| 'new_user') echo 'current';  ?>"><a href="#Setting" class="drafts ">Setting</a> <span class="arrow"></span>
+   <li class="<?php if($active == 'profile'|| $active == 'setting') echo 'current';?>"><a href="#Setting" class="drafts ">Setting</a> <span class="arrow"></span>
       <ul id="Setting">
         <li class="<?php if($active == 'new_user') echo 'current'; ?>"><a href="<?php echo base_url('Admin/new_user')?>">New User</a></li>
         
