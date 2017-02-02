@@ -191,15 +191,48 @@ public function delete_rank()
 
   public function pin()
   {
-    $res = $this->Master->ranks(); 
-    $this->data['ranks'] = $res; 	
+    $res = $this->Master->pin_type();
+	
+    
+	$i=1;
+	foreach($res as $key=>$value)
+	{
+	 if($i==1)	
+	 $data[null] = 'Select Type';
+	 $i++;
+	 $data[$value->m4_1_id] = $value->m4_1_name;
+	 
+	}
+	 
+	$this->data['pin_type'] = $data; 
+	$this->data['pins'] = $this->Master->pins(); 
+	
+		
     $this->data['page'] = 'Master/Mst_pin';
-     view('index',$this->data);
+    view('index',$this->data);
   }
 
   public function add_new_pin()
   {
-   //
+	$logid = post('loginid');
+	$pin_type = post('pin_type'); 
+	$pin_numb = post('pin_number');
+	$pin_amt = $this->Master->get_where('m4_1_pin_type',array('m4_1_id'=>$pin_type))->m4_1_amount;
+	
+	for($i=0;$i<= $pin_numb;$i++)
+	{
+	  $data[] = array(
+	                  'm4_1_pintype_id'=>$pin_type,
+					  'm4_2_name'=>$pin_amt.date('Ymdhms', strtotime(" +$i day")),
+					  't1_1_userid'=>$logid,
+					  'm4_2_status'=>'1',
+					  'm4_2_date'=>date('Y-m-d')
+					  
+	      ) ;  
+	}
+	$res = $this->Master->insert_batch('m4_2_pins',$data);
+	$this->send_response_status($res,'Master/pin');
+   
   }
 
   

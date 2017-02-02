@@ -13,6 +13,27 @@
 	       return $res;
 	    }
 		
+		public function insert_batch($table ,$data)
+	    {
+	       $res = $this->db->insert_batch($table,$data);
+	       return 1;
+	    }
+		
+		
+		 //cnd is array
+	  public function delete($table,$cnd)
+	  {
+	     return $this->db->delete($table,$cnd);
+	  }
+	  
+	 public function get_where($table,$cnd)
+	 {
+	  return $this->db->get_where($table,$cnd)->row(); 
+	 }
+	 
+	
+	 
+		
 		
 		public function country()
 		{
@@ -80,12 +101,18 @@
 	  return $this->db->order_by('m3_1_id','DESC')->get('m3_1_ranks')->result();
 	}
 	
+	 
+	public function pin_type()
+	{
+	  return $this->db->order_by('m4_1_id','ASC')->get('m4_1_pin_type')->result();
+	} 
+	
+	 public function pins()
+	 {
+	 return  $this->db->order_by('m4_2_id','DESC')->get('m4_2_pins')->result();
+	 }
 	  
-	  //cnd is array
-	  public function delete($table,$cnd)
-	  {
-	     return $this->db->delete($table,$cnd);
-	  }
+	 
 		
 		
 		
