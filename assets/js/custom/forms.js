@@ -92,6 +92,24 @@ jQuery(document).ready(function(){
 	});
 	
 	
+	///// Add new Pin validation /////
+	jQuery("#pintadd").validate({
+		rules: {
+			loginid: "required",
+			pin_number: "required",
+			pin_amount: "required",
+			pin_type: "required",
+			
+		},
+		messages: {
+			loginid: "Please enter Login id",
+			pin_amount: "Please Select First Pin Type",
+			pin_number: "Please enter Number of Pins",
+			pin_type : "Please Select Pin type",
+		}
+	});
+	
+	
 	
 	
 	///// TAG INPUT /////

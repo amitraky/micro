@@ -111,7 +111,7 @@ function auto_logout() {
 				
 				  'custom/elements.js',
 				  'custom/tables.js',
-				  'custom/custom.js',
+				  'custom/adncustom.js',
 				  
 				  'custom/dashboard.js',
 				  'plugins/jquery.flot.min.js',
