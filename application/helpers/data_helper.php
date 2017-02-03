@@ -79,6 +79,7 @@
 	
 	function user_status($status)
 	{
+	 
 	  if($status == 'Active')
 		 button('success',$status);
 	  if($status == 'Deactive')
@@ -176,22 +177,50 @@
 	  echo "<button class='stdbtn btn_red' style='height:28px;'>$status</button>";
 	  }
 	  
-	  if($status == 'Pending')
+	  if($status == 'Pending' )
 	  {	
 	  echo "<button class='stdbtn btn_yellow' style='height:28px;'>$status</button>";
 	  }
 	  
-	  if($status == 'Active')
+	  if($status == 'Active' )
 	  {	
 	  echo "<button class='stdbtn btn_blue' style='height:28px;'>$status</button>";
 	  }
-	  if($status == 'Deactive')
+	  if($status == 'Deactive'  )
 	  {	
 	  echo "<button class='stdbtn btn_black' style='height:28px;'>$status</button>";
 	  }
 	  
 	  
 	}
+	
+	function txt_status($status)
+	{
+	  
+	  if($status == '0' )
+	  {	
+	   echo '<i class="status_pending")"><b>Pending</b></i>';
+	  }
+	  
+	  if($status == '1' )
+	  {	
+	     echo '<i class="status_active"><b>Active</b></i>';
+	  }
+	  
+	  
+	  if($status == '2')
+	  {	
+	     echo '<i class="status_deactive"><b>Deactive</b></i>';
+	  }
+	  
+	  
+	  if($status == '3')
+	  {	
+	   echo '<i class="status_reject")"><b>Reject</b></i>';
+	  }
+	  
+	}
+	
 	
 	
 	function get_banks($id=null)
