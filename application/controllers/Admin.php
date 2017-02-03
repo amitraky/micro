@@ -27,6 +27,7 @@ class Admin extends CI_Controller {
 		 $this->data['header'] =   'admin/Adm_header';	
 	     $this->data['menu'] =   'admin/Adm_menu';
 		 $userdata = get_session('userdata');
+;
         if (empty($userdata) || $userdata->t1_1_status != '1')
             login_page();
 		 $this->load->model('Admin_model','Admin');
@@ -93,41 +94,50 @@ class Admin extends CI_Controller {
 	  redirect($redirect);
 	
 	}
+	
+	public function admin($fx)
+	{
+	  return $this->Admin->$fx();
+	}
+	
+	public function user($fx)
+	{
+	  return $this->Admin->$fx();
+	}
 
 ////////////////////////////////////////////PUBLIC////////////////////////////////////////
 
-	
-	public function profile()
-	{
-	  
-	  $this->data['row'] = $this->Admin->user();	
-	  $this->data['page'] =   'admin/Adm_profile';
-	  view('index',$this->data); 
-	}
-	
-	public function setting()
+
+
+### SETTING ### 
+
+public function setting()
 	{
 	 
-	  $this->data['rows'] = $this->Admin->setting();
+	  $this->data['rows'] = $this->admin('setting');
 	  $this->data['page'] =   'admin/Adm_setting';
 	  view('index',$this->data); 
 	}
 	
+
+### END SETTTING### 
+
+### USERS MANAGEMENT ###	
+	
+	public function profile()
+	{
+	  
+	  $this->data['row'] = $this->admin('user');	
+	  $this->data['page'] =   'admin/Adm_profile';
+	  view('index',$this->data); 
+	}
+	
+	
 	public function all_users()
 	{
-	   $this->data['rows'] = $this->Admin->users();
+	   $this->data['rows'] = $this->admin('users');;;
 	   $this->data['page'] =   'admin/Adm_users';
 	   view('index',$this->data); 
-	}
-	
-	public function active_users()
-	{
-	  //
-	}
-	
-	public function deactive_users()
-	{
-	  //
 	}
 	
 	
@@ -270,8 +280,6 @@ class Admin extends CI_Controller {
 	}
 	
 	
-	
-	
 	public function new_user()
 	{
 	  
@@ -303,9 +311,55 @@ class Admin extends CI_Controller {
 	   
 	}
 	
+	
+	//VIEW ALL AGENTS
+	public function agents()
+     {
+        $this->data['rows'] = $this->admin('users');;;
+	    $this->data['page'] =   'admin/Adm_agents';
+	    view('index',$this->data); 
+     }
+  
+  
+  //VIEW ALL customer
+    public function customers()
+    {
+        $this->data['rows'] = $this->admin('users');;;
+	    $this->data['page'] =   'admin/Adm_customers';
+	    view('index',$this->data); 
+    }
+  
+  
+   //VIEW ALL branch
+    public function branchs()
+    {
+       $this->data['rows'] = $this->admin('users');;;
+	    $this->data['page'] =   'admin/Adm_branchs';
+	    view('index',$this->data); 
+    }
+  
+    
+	
+	public function user_detail()
+	{
+	   $logid = post('logid');	
+	   $res = $this->User->user_detail($logid);
+	   if($res == falseI)
+	   {
+	     echo "User Not Found";
+	   }
+	   else
+	   {
+	     echo $res->t1_2_name;
+	   }
+	}
+	
+	
+	
 ###FILE UPLOADS###
 	
-	  public function upload_file($f_name,$error_page,$f_type=null,$move_file='raw_upload') { 
+	  public function upload_file($f_name,$error_page,$f_type=null,$move_file='raw_upload') 
+	  { 
 	  
 	      if($f_type == 1)
 		  { 
@@ -381,20 +435,13 @@ class Admin extends CI_Controller {
 	
 ### USER MANAGEMENT ###
    
-    public function user_detail()
-	{
-	   $logid = post('logid');	
-	   $res = $this->User->user_detail($logid);
-	   if($res == falseI)
-	   {
-	     echo "User Not Found";
-	   }
-	   else
-	   {
-	     echo $res->t1_2_name;
-	   }
-	}
+    
 
+ 
+  
+  
+  
+  
 
 
 ### USER END ###
