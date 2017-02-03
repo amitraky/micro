@@ -2367,3 +2367,33 @@ blockquote.bq2 {
 	margin-left:10px;
 	font-style: normal;
 }
+.status_active{
+	color:green;
+	font-weight:100;
+	cursor:pointer;
+	margin-left:10px;
+	font-style: normal;
+}
+
+.status_pending{
+	color:yellow;
+	font-weight:100;
+	cursor:pointer;
+	margin-left:10px;
+	font-style: normal;
+}
+
+.status_reject{
+	color:#f00;
+	font-weight:100;
+	cursor:pointer;
+	margin-left:10px;
+	font-style: normal;
+}
+.status_deactive{
+	color:#540707;
+	font-weight:100;
+	cursor:pointer;
+	margin-left:10px;
+	font-style: normal;
+}

@@ -14,7 +14,7 @@
     <div id="add_pin" class="subcontent">
     <div class="stdform stdform2">
       <div class="contenttitle2">
-        <h3>Rank Information</h3>
+        <h3>Add Pin Information</h3>
       </div>
       <!--contenttitle-->
       
@@ -62,17 +62,20 @@
     
     <div id="detail_pin" class="subcontent" style="display:none">
       <div class="contenttitle2">
-        <h3>Rank Information</h3>
+        <h3> Pin Details Information </h3>
       </div>
       <!--contenttitle-->
       
       <?php  echo get_msg('error'); get_msg('success'); ?>
+      
+      
       <table cellpadding="0" cellspacing="0" border="0" class="stdtable" id="dyntable">
         <colgroup>
         <col class="con0" />
         <col class="con1" />
         <col class="con0" />
         <col class="con1" />
+        <col class="con0" />
         <col class="con0" />
         </colgroup>
         <thead>
@@ -81,8 +84,9 @@
             <th class="head1">Pin</th>
             <th class="head0">Login Id</th>
             <th class="head1">Amount</th>
+            <th class="head1">Who Use</th>
             <th class="head1">Status</th>
-            <th class="head0">Action</th>>
+            <th class="head0">Action</th>
           </tr>
         </thead>
         <tfoot>
@@ -91,6 +95,7 @@
             <th class="head1">Pin</th>
             <th class="head0">Login Id</th>
             <th class="head1">Amount</th>
+            <th class="head1">Who Use</th>
             <th class="head1">Status</th>
             <th class="head0">Action</th>
           </tr>
@@ -103,12 +108,15 @@
             <td><?php echo $pin->m4_2_name;?></td>
             <td><?php echo $pin->m4_2_date;?></td>
             <td><?php echo $pin->m4_2_date;?></td>
-            <td class="center"></td>
+            <td><?php echo $pin->t1_1_who_use;?></td>
+             <td><?php txt_status($pin->m4_2_status);?></td>
             <td><i class="del_icn" onclick="delete_pin('<?php //echo $rank->m3_1_id;?>')"><b>Delete</b></i></td>
           </tr>
           <?php } ?>
         </tbody>
       </table>
+      
+      
     </div>
   </div>
   <!--contentwrapper--> 

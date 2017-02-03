@@ -110,6 +110,30 @@ jQuery(document).ready(function(){
 	});
 	
 	
+	///// Add new Pin validation /////
+	jQuery("#add_branch").validate({
+		rules: {
+			name: "required",
+			email: "required",
+			mobile: "required",
+			pincode: "required",
+			address: "required",
+			landmark: "required",
+			
+		},
+		messages: {
+			name: "Please enter Branch Name",
+			email: "Please end email",
+			mobile: "Please MObile Number",
+			pincode : "Please enter Pin code",
+			address : "Please enter address",
+			landmark : "Landmark is required",
+		}
+	});
+	
+	
+	
+	
 	
 	
 	///// TAG INPUT /////
@@ -124,10 +148,12 @@ jQuery(document).ready(function(){
 	
 	///// CHARACTER COUNTER /////
 	
-	jQuery("#textarea2").charCount({
-		allowed: 120,		
+	jQuery(".textarea100").charCount({
+		allowed: 100,		
 		warning: 20,
-		counterText: 'Characters left: '	
+		counterText: '<i style="color:red">Characters left</i>: '	
 	});
+	
+	
 	
 });
