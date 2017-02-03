@@ -151,7 +151,7 @@ echo form_dropdown('status', $status, $row->t1_1_status);
                          ?>
                              
                              <p>
-                                <label>countries</label>
+                                <label>country</label>
                                 <span class="field"><?php 							 
                                     echo form_dropdown('country', countries(),$row->t1_2_country,"onChange= get_loc_name(this.value,'state_url','States') disabled=disabled;");
                                 ?></span>
@@ -161,14 +161,14 @@ echo form_dropdown('status', $status, $row->t1_1_status);
                           
                              
                             <p>
-                                <label>States</label>
+                                <label>State</label>
                                 <span class="field" id="States"><?php 							 
                                     echo form_dropdown('state', states(), $row->t1_2_state, "onChange= get_loc_name(this.value,'city_url','Cities');");
                                 ?></span>
                              </p>
                              
                              <p>
-                                <label>Cities</label>
+                                <label>City</label>
                                 <span class="field" id="Cities"><?php 							 
                                     echo form_dropdown('city', cities(),$row->t1_2_city);
                                 ?></span>

@@ -23,11 +23,7 @@
 						      
 							input('Agent ID','text','agent_id','agent_id');?>
 							   
-							 <p>
-                                <label>Account Type</label>
-                                <span class="field">
-                                 <input type="text" id="agent_id" name="agent_id" value="" onkeyup=""="user_detail(this.value,'User/user_detail')" class="smallinput"/></span>
-                              </p>
+							
 							<?php
 							
 							input('Agent Name','text','agent_name','agent_name'); 
@@ -51,8 +47,8 @@
                         <p>
                         	<label>Account Type</label>
                             <span class="field"><?php 
-							 $type = array('Customer'=>'Customer','Agent'=>'Agent', 'Admin'=>'Admin');
-echo form_dropdown('type', $type);
+							 $type = array( '1'=>'Admin','2'=>'Branch','3'=>'Agent','4'=>'Customer');
+echo form_dropdown('type', $type,'');
 							
 							?></span>
                         </p>           
