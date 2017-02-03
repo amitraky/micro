@@ -109,7 +109,7 @@
 	
 	 public function pins()
 	 {
-	 return  $this->db->order_by('m4_2_id','DESC')->get('m4_2_pins')->result();
+	 return  $this->db->order_by('m4_2_id','DESC')->get('view_pins')->result();
 	 }
 	  
 	 
