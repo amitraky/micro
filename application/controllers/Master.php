@@ -246,6 +246,28 @@ public function delete_rank()
 ### END PIN ###
 
 
+### BRANCH ### 
+ 
+  public function branch()
+  {
+	 // $res = $this->Master->ranks(); 
+	  //$this->data['ranks'] = $res; 	
+	  $this->data['page'] = 'Master/Mst_branch';
+	  view('index',$this->data);
+  }
+  
+  public function add_new_branch()
+  {
+	  //
+  }
+  
+  public function delete_branch()
+  {
+    //
+  }
+  
+### END BRANCH ###
+
 
 	}
 ?>
