@@ -75,11 +75,12 @@ class Auth extends CI_Controller
 				
 				$data['header'] =  $user_type.'/Adm_header';
 				$data['menu'] = $user_type.'/Adm_menu';
-				$status = array('Pending','reject','Deactive');
+				$status = array('0','2');//0='Pending',2='Deactive' 1='active'
 				$log_st = in_array($raw->t1_1_status,$status);
 				if($log_st === true)
 				{
-				   set_msg('warning',' Login id is <b style="color:red">'.$raw->t1_1_status.'</b> Plz contact to site admin ');	
+				   if($raw->t1_1_status == 0) $status = 'Pending';if($raw->t1_1_status == 2) $status = 'Deactive';	
+				   set_msg('warning',' Login id is <b style="color:red">'.$status.'</b> Plz contact to site admin ');	
 				   login_page();
 				}
 				
