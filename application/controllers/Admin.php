@@ -155,7 +155,7 @@ public function setting()
 	  $data = self::get_fields_value($array);
 	  $data2= self::get_fields_value($array2);
 	  
-	  $res =  $this->User->update('t1_1_users',$data,array('t1_1_user_id'=>$id));
+	  $res =  $this->User->update('t1_1_users',$data,array('t1_1_userid'=>$id));
 	  $res =  $this->User->update('t1_2_users_detail',$data2,array('t1_1_userid'=>$id));
 	  $this->send_response_status($res,'Admin/profile'); 
 	}
@@ -221,7 +221,7 @@ public function setting()
 	 
 	  $id = post('id');
 	  $data = self::get_fields_value($array);
-	  $res =  $this->User->update('t1_1_users',$data,array('t1_1_user_id'=>$id));
+	  $res =  $this->User->update('t1_1_users',$data,array('t1_1_userid'=>$id));
 	  $this->send_response_status($res,'Admin/profile'); 
 	}
 	
@@ -299,7 +299,7 @@ public function setting()
 	   $user_id = $this->User->insert('t1_2_users_detail',$array);
 	   $array2 = array(  
 	                     't1_1_email'=> post('email'),
-						 't1_1_user_id'=>$user_id,
+						 't1_1_userid'=>$user_id,
 						 't1_1_login_pwd'=>rand(1000,9999),
 						 't1_1_login_id'=>rand(1000,9999),
 						 't1_1_login_id'=>rand(1000,9999),
@@ -433,16 +433,28 @@ public function setting()
 ### END FILE ###	
 
 	
-### USER MANAGEMENT ###
+### SAVING MANAGEMENT ###
    
-    
-
- 
-  
-  
-  
-  
-
+    public function saving()
+	{
+	  $this->data['page'] = 'Admin/Adm_saving';
+	  view('index',$this->data); 
+	}
+       
+	public function add_new_saving()
+	{
+	 // 
+	}
+	
+	public function update_saving()
+	{
+	 // 
+	}
+	
+	public function delete_saving()
+	{
+	 // 
+	}
 
 ### USER END ###
 	

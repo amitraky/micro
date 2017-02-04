@@ -21,7 +21,7 @@
 	function get_userdata($reg_id)
 	{
 	  $CI =& get_instance();
-	  $data =  $CI->db->get_where('view_users',array('t1_1_user_id'=>$reg_id))->row(); 
+	  $data =  $CI->db->get_where('view_users',array('t1_1_userid'=>$reg_id))->row(); 
 	  return($data);
 	}
 	
@@ -44,7 +44,7 @@
 	{ 
 	  $CI = &get_instance();
 	  $user = array('loginid'=>'Unknown','name'=>'Unknown');
-	  $row =  $CI->db->get_where('view_users',array('t1_1_user_id'=>$user_id))->row(); 
+	  $row =  $CI->db->get_where('view_users',array('t1_1_userid'=>$user_id))->row(); 
 	  if(($row))
 	   $user =  array('loginid'=>$row->t1_1_login_id,'name'=>$row->t1_2_name);
 	   

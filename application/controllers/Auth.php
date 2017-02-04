@@ -64,7 +64,7 @@ class Auth extends CI_Controller
 			   if($nums>0)
 			   {
 			    //set all user data here
-				$reg = $res->row()->t1_1_user_id;
+				$reg = $res->row()->t1_1_userid;
 				$raw = get_userdata($reg);
 								
 				$u_type = ($raw->t1_1_type);// user type
@@ -159,7 +159,7 @@ class Auth extends CI_Controller
 		
 		public function log_out()
 		{
-		  $reg_id = ($this->session->userdata('userdata')->t1_1_user_id);	
+		  $reg_id = ($this->session->userdata('userdata')->t1_1_userid);	
 	      $this->Auth->logout_update($reg_id);		
 		  $this->session->sess_destroy();
 		  login_page();

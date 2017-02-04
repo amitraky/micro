@@ -11,7 +11,7 @@
         // get user by id
 		public function user_details($reg)
 		{
-		  $res =  $this->db->where('t1_1_user_id',$reg)->get('view_users');
+		  $res =  $this->db->where('t1_1_userid',$reg)->get('view_users');
 		  if($res->num_rows()>0)
 		     $user = $res->row();
 		  else 
@@ -22,10 +22,10 @@
 		
 		public function get_user_downline($log_id)
 		{
-		  $user = get_user_field('t1_1_user_id',"t1_1_login_id = '$log_id'");	
+		  $user = get_user_field('t1_1_userid',"t1_1_login_id = '$log_id'");	
 		  if($user != '0')
 		  { 
-		    $reg =  $user->t1_1_user_id;
+		    $reg =  $user->t1_1_userid;
 		    $users = $this->db->query("CALL get_user_downline($reg)")->result();
 			return $users;
 			
@@ -41,7 +41,7 @@
 		public function get_direct_referral($log_id)
 		{
 		  
-		   $res = @get_user_field('t1_1_user_id',"t1_1_login_id = '$log_id'")->t1_1_user_id;
+		   $res = @get_user_field('t1_1_userid',"t1_1_login_id = '$log_id'")->t1_1_userid;
 		   if($res>0)
 		   {
 			   $reg = $res; 			 

@@ -18,13 +18,13 @@
 		public function loging_update($reg_id)
 		{
 		 $ip = $this->input->ip_address();
-		 $this->db->where('t1_1_user_id',$reg_id)->update('t1_1_users',array('t1_1_lst_log_ip'=> $ip,'t1_1_lst_log_date'=>date('Y-m-d h:m:s'),'t1_1_log_status'=>'Online'));
+		 $this->db->where('t1_1_userid',$reg_id)->update('t1_1_users',array('t1_1_lst_log_ip'=> $ip,'t1_1_lst_log_date'=>date('Y-m-d h:m:s'),'t1_1_log_status'=>'Online'));
 		}
 		
 		public function logout_update($reg_id)
 		{
 		 $ip = $this->input->ip_address();
-		 $this->db->where('t1_1_user_id',$reg_id)->update('t1_1_users',array('t1_1_lst_log_ip'=> $ip,'t1_1_lst_log_date'=>date('Y-m-d h:m:s'),'t1_1_log_status'=>'Offline'));
+		 $this->db->where('t1_1_userid',$reg_id)->update('t1_1_users',array('t1_1_lst_log_ip'=> $ip,'t1_1_lst_log_date'=>date('Y-m-d h:m:s'),'t1_1_log_status'=>'Offline'));
 		}
 		
 		public function send_otp($reg_id)

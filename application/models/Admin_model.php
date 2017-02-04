@@ -24,7 +24,7 @@
 		 if(uri(3))
 		   $reg= uri(3);
 		 
-		 return  $this->db->where('t1_1_user_id',$reg)->get('view_users')->row();
+		 return  $this->db->where('t1_1_userid',$reg)->get('view_users')->row();
 		
 		}
 		

@@ -129,7 +129,7 @@
                             <td><?php //echo $row->t1_1_email ?></td>
                             <td><?php //echo $row->t1_2_mobile_no ?></td>
                             <td class="center"><?php  //status($row->t1_1_status) ?></td>
-                            <td class="center"> <?php  //action(baseurl('Admin/profile/'.$row->t1_1_user_id),'search')?></td>
+                            <td class="center"> <?php  //action(baseurl('Admin/profile/'.$row->t1_1_userid),'search')?></td>
                         </tr>
                           <?php } ?> 
                       

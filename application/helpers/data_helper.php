@@ -90,7 +90,7 @@
 		 button('danger',$status);	
 	}
 	
-	// t1_1_user_id = 1,$field = t1_1_email
+	// t1_1_userid = 1,$field = t1_1_email
 	function get_user_field($field,$where)
 	{
 	  $CI = &get_instance();
