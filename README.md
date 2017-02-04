@@ -25,7 +25,9 @@ Micro Management
 
      2. PHP Version :5.5.12
 
-   *C. 1. MySQL*
+   *C. Database Configuration*
+	 1. mysql
+	 Description: 
 	 
 
   
