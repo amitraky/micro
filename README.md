@@ -26,7 +26,15 @@ Micro Management
      2. PHP Version :5.5.12
 
    *C. Database Configuration*
-		<p>1. MySQL:</p>
+	  1. Mysql :
+		 
+		 1. Table - Create Table first understanding of exists table structure like what's (t,m..)or (t1,m1..) in database where define on header part . 
+		 
+		 2. SP -  Create SP first understanding of exists SP  structure.
+		 
+		 3. View -  Create View first understanding of exists View structure.
+		 
+		
 	
 
   
