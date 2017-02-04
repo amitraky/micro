@@ -28,11 +28,11 @@ Micro Management
    *C. Database Configuration*
 	  1. Mysql :
 		 
-		 1. Table - Create Table first understanding of exists table structure like what's (t,m..)or (t1,m1..) in database where define on header part . 
+		 * Table - Create Table first understanding of exists table structure like what's (t,m..)or (t1,m1..) in database where define on header part . 
 		 
-		 2. SP -  Create SP first understanding of exists SP  structure.
+		 * SP -  Create SP first understanding of exists SP  structure.
 		 
-		 3. View -  Create View first understanding of exists View structure.
+		 * View -  Create View first understanding of exists View structure.
 		 
 		
 	
