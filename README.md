@@ -18,6 +18,7 @@ Micro Management
    **C. Database Configuration**
    
      1. MySQL Version :5.6.17
+	 2. Table,View,SP Structer
 
    **D. Server Management**	
    
@@ -25,8 +26,8 @@ Micro Management
 
      2. PHP Version :5.5.12
 
-   *C. Database Configuration*
-	  1. Mysql :
+*C. Database Configuration*
+	  **2. Table,View,SP Structer :**
 		 
 		 *Table* - Create Table first understanding of exists table structure like what's (t,m..)or (t1,m1..) in database where define on header part . 
 		 
