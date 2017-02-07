@@ -948,15 +948,33 @@ form button:active {
 	-moz-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3); 
 	box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
-
+form input.numbox { width: 10%;  font-size:14px; }
+form input.microinput, form textarea.smallinput { width: 25%;}
 form input.smallinput, form textarea.smallinput { width: 40%; }
-form input.mediuminput, form textarea.mediuminput { width: 60%; }
+form input.mediuminput, form textarea.mediuminput { width: 60%;  }
 form input.longinput, form textarea.longinput { width: 85%; }
-form input.error { border: 1px solid #f00; }
+form input.error { border: 1px solid #f00; 
+	   
+    background-image: url(../images/nofifi.png)	;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	background-position: right 6px;
+    background-repeat: no-repeat;
+	}
 form textarea.error { border: 1px solid #f00; }
 form textarea.error { border: 1px solid #f00; }
 form select.error { border: 1px solid #f00; }
 form label.error { float: none; color: #f00; font-size: 11px; display: block; text-align: left; font-weight: bold; }
+form input.valid { border-color: #468847;
+  background-image: url(../images/nofifi.png)	;
+     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	    background-position: right -40px;
+    background-repeat: no-repeat;
+	}
+
+
+
 
 .stdform p, .stdform div.par { margin: 20px 0; }
 .stdform div.par { overflow: hidden; }
@@ -981,7 +999,7 @@ form label.error { float: none; color: #f00; font-size: 11px; display: block; te
 .stdform2 label { display: inline-block; padding: 20px; vertical-align: top; text-align: left; font-weight: bold; }
 .stdform2 label.error { margin-left: 0; padding: 0; }
 .stdform2 label small { font-size: 11px; color: #999; display: block; font-weight: normal; line-height: 16px; }
-.stdform2 span.field, .stdform2 div.field { margin-left: 220px; display: block; background: #fff; padding: 20px; border-left: 1px solid #ddd; }
+.stdform2 span.field, .stdform2 div.field { margin-left: 220px; display: block; background: #fff; padding: 14px; border-left: 1px solid #ddd; }
 .stdform2 .stdformbutton { margin-left: 0; padding: 20px; background: #fff; }
 
 /*** DUAL BOX ***/
@@ -2396,4 +2414,13 @@ blockquote.bq2 {
 	cursor:pointer;
 	margin-left:10px;
 	font-style: normal;
+}
+
+.multiin{
+
+ margin:10px 15px 10px 10px ;
+}
+
+.note{
+  color:red;
 }

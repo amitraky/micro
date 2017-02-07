@@ -6,7 +6,6 @@
     <meta name="description" content="">
     <meta name="author" content="Mosaddek">
     <meta name="keyword" content="ferry,micro, amit, ferryinfo,accounting,ac">
-    <link rel="shortcut icon" href="img/favicon.png">
 
     <title><?PHP echo SITE_TITLE; ?></title>
 
@@ -30,7 +29,7 @@ function reset_interval() {
     timer = 0;
     // second step: implement the timer again
 	
-    timer = setInterval("auto_logout()", 3000);
+    //timer = setInterval("auto_logout()", 3000);
     // completed the reset of the timer
   }
 }

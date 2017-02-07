@@ -132,7 +132,28 @@ jQuery(document).ready(function(){
 	});
 	
 	
-	
+	///// Add new Saving Account validation /////
+	jQuery("#add_Saving").validate({
+		rules: {
+			datepickto: "required",
+			logid: "required",
+			maxamount: "required",
+			agentid: "required",
+			branchcode: "required",
+			branchocdename: "required",
+			paymentmode: "required",
+			
+		},
+		messages: {
+			datepickto: "Please Select Date",
+			logid: "Please Enter  login id",
+			maxamount: "Please Enter amount",
+			agentid : "Please enter agent id",
+			branchcode : "Please enter branch code",
+			branchocdename : "Please Select this",
+			paymentmode : "Please select payment Mode",
+		}
+	});
 	
 	
 	

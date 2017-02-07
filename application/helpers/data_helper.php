@@ -276,10 +276,10 @@
 	
 	
 	
-	function input($leble,$type,$name,$id=null,$value=null)
+	function input($leble,$type,$name,$id=null,$value=null,$attr1=null,$attr2=null)
 	{
 	  echo "<p><label>$leble</label>
-                            <span class='field'><input type='$type' name='$name' id='$id' class='smallinput' value='$value' /></span>
+                            <span class='field'><input type='$type' name='$name' id='$id' class='smallinput' value='$value' $attr1,$attr2 /></span>
                         </p>";
 	}
 	

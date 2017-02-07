@@ -15,61 +15,109 @@
         	<div id="basic" class="subcontent">
                                 
                     <div class="contenttitle2">
-                        <h3>Branch Information</h3>
+                        <h3>Saving Information</h3>
                     </div><!--contenttitle-->
                       <?php  echo get_msg('error'); get_msg('success'); ?>
                         <?php 
 						
-						echo form_open('Admin/add_new_user',array('class'=>"stdform stdform2",'id'=>"add_branch"));
+						echo form_open('Admin/add_new_user',array('class'=>"stdform stdform2",'id'=>"add_Saving"));  ?>  
 						      
 							
-							input('Name','text','name','name');
-							
-							
-							input('Email','text','email','email');
-							
-							
-							input('Mobile','text','mobile','mobile');
-							
-							input('Pin Code','text','pincode','pincode');
-						   
-						
-						    ?>  
-                                   
-                         <p>
-                                <label>State</label>
-                                <span class="field" id="States"><?php 							 
-                                    echo form_dropdown('state', states(),'id=sta'," onChange= get_loc_name(this.value,'city_url','Cities');");
-                                ?></span>
-                             </p>
-                             <input type="hidden" id="city_url" value="<?php echo baseurl('master/ajax_city');?>" />
-                             <p>
-                                <label>City</label>
-                                <span class="field" id="Cities"><?php 							 
-                                    echo form_dropdown('city', cities());
-                                ?></span>
-                             </p>
-                             <p>
-                        	<label>Address</label>
-                            <span class="field">
-                                <textarea cols="20" rows="2" name="address" id="textarea2" class="smallinput textarea100"></textarea>
-                            </span> 
-                        </p>
+                            
+                                  <p>
+                                <label>#Saving ID<i class="note">*</i></label>
+                                <span class="field">
+                                <input type="text" name="name" id="name" class="microinput" value="SAV<?php ECHO date('Ymdhms');?>" readonly>       <br /><b class="note">Note:</b><i class="note">Randmon Saving account id created</i>
+                                </span>
+                                </p>
+              
+						         <p>
+                                <label>Create Date<i class="note">*</i></label>
+                                <span class="field">
+                                 <input type="text" id="datepickto"  name="date"/>
+                                </span>
+                                </p>
+                                
+                                
+                          <div class="contenttitle2">
+                        <h3>User Information</h3>
+                    </div><!--contenttitle-->      
+						  <p>
+                                <label>User Log ID<i class="note">*</i></label>
+                                <span class="field">
+                                <input type="text" name="logid" id="logid" class="microinput" placeholder="Enter User Log ID">
+                                
+                               <i style="margin-left:20px;"> <input type="text" name="name" id="name" class="smallinput" placeholder="Auto fillup User Name" disabled="disabled"> </i>               <br />
+                                </span>
+                                </p>
+                                
+                                
+                                  <p>
+                                <label>Joint A/C Holder Name</label>
+                                <span class="field">
+                                <input type="text" name="name" id="name" class="smallinput" placeholder="Joint A/C Holder Name" >      
+                                </span>
+                                </p>
+                                
+                                
+                                <div class="contenttitle2">
+                        <h3>Plan Information</h3>
+                    </div><!--contenttitle-->      
+						  <p>
+                                <label>Amount<i class="note">*</i></label>
+                                <span class="field">
+                                <input type="text" name="maxamount" id="maxamount" class="microinput" placeholder="Enter Amount">
+                                <b class="note" style="margin-left:20px;"> Ninety Eight  Thousand  Five Hundred and  Sixty Two </b>
+                                        
+                                </span>
+                                </p>
                              
-                            <p>
-                        	<label>Address2</label>
-                            <span class="field">
-                                <textarea cols="20" rows="2" name="address" id="textarea2" class="smallinput textarea100"></textarea>
-                            </span> 
-                        </p> 
-                        
-                           <p>
-                        	<label>Landmark</label>
-                            <span class="field">
-                                 <input type="text" id="landmark" name="landmark"  class="smallinput" />
-                            </span> 
-                        </p>
-                                              
+                                
+                                
+                         
+                            <div class="contenttitle2">
+                        <h3>Agent Details</h3>
+                    </div><!--contenttitle-->      
+						  <p>
+                                <label>Agent ID<i class="note">*</i></label>
+                                <span class="field">
+                                <input type="text" name="agentid" id="agentid" class="microinput" placeholder="Enter Agent ID">
+                                 <i style="margin-left:20px;"><input type="text" name="name" id="name" class="smallinput" readonly="readonly"  placeholder="Auto Fillup Agent Name"></i>
+                                     
+                                </span>
+                                </p>
+                                
+                                
+                                  <p>
+                                <label>Branch Code<i class="note">*</i></label>
+                                <span class="field">
+                                <input type="text" name="branchcode" id="branchcode" class="microinput"  placeholder="Enter Branch Code" >   
+                                
+                                <i style="margin-left:20px;"><input type="text" name="name" id="name" class="smallinput" readonly="readonly"  placeholder="Auto Fillup Branch Name"></i>   
+                                </span>
+                                </p>   
+                              <div>  
+                             <div class="contenttitle2">
+                        <h3>Payment Details</h3>
+                    </div><!--contenttitle-->      
+						  <p>
+                                <label>Branch Code + Name</label>
+                                <span class="field">
+                                <input type="text" name="branchocdename" id="branchocdename" class="microinput" placeholder="Enter Agent ID">
+                                 <i style="margin-left:20px;"><input type="text" name="name" id="name" class="smallinput" readonly="readonly"  placeholder="Auto Fillup Agent Name"></i>
+                                     
+                                </span>
+                                </p>
+                                
+                                
+                                  <p>
+                                <label>Payment Mode<i class="note">*</i></label>
+                                <span class="field">
+                                <input type="text" name="paymentmode" id="paymentmode" class="microinput"  placeholder="Enter Branch Code" >     
+                                </span>
+                                </p>   
+                              </div>   
+                                       
                        <?php      submit('SUBMIT') ; ?>
                         
                     </form>
