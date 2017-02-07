@@ -104,6 +104,19 @@ class Admin extends CI_Controller {
 	{
 	  return $this->Admin->$fx();
 	}
+	
+	// validate input fields
+	public function validate($name,$rule)
+	{
+	 return $this->form_validation->set_rules($name, ucfirst($name),$rule);
+	}
+	
+	//return true if form submite
+	public function form()
+	{
+	  return  $this->form_validation->run();
+	}
+	
 
 ////////////////////////////////////////////PUBLIC////////////////////////////////////////
 
