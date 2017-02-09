@@ -156,6 +156,27 @@ jQuery(document).ready(function(){
 	});
 	
 	
+	///// withdrawal  validation /////
+	jQuery("#Add_withdrawal").validate({
+		rules: {
+			acn_no: "required",
+			snd_amt: { required: true,
+                       digits: true,
+				       min: 1
+					 },
+			cfm_amt:{ required: true,
+                       digits: true,
+				       min: 1
+					 },
+			
+		},
+		messages: {
+			acn_no: "Please enter account number",
+			
+		}
+	});
+	
+	
 	
 	///// TAG INPUT /////
 	
