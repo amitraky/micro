@@ -46,13 +46,27 @@
     </li>
     
     
-    <li class="<?php if($active == 'saving') echo 'current';  ?>"><a href="#Transactions" class="users">Accounts</a> <span class="arrow"></span>
+    <li class="<?php if($active == 'savingss') echo 'current';  ?>"><a href="#Transactions" class="users">Accounts</a> <span class="arrow"></span>
       <ul id="Transactions">
        
         <li class="<?php if($active == 'saving') echo 'current'; ?>"><a href="<?php echo base_url('admin/saving')?>">Saveing</a></li>
         <li class="<?php if($active == 'account_withdrawal') echo 'current'; ?>"><a href="editor.html">Withdrawal</a></li>
       </ul>
     </li>
+    
+    
+    
+    <li class="<?php if($active == 'withdrawal' || $active == 'deposit'  ) echo 'current';  ?>"><a href="#Amount" class="elements">Amount</a> <span class="arrow"></span>
+      <ul id="Amount">
+       
+        <li class="<?php if($active == 'deposit') echo 'current'; ?>"><a href="<?php echo base_url('Amount/deposit')?>">Deposit</a></li> 
+          <li class="<?php if($active == 'withdrawal') echo 'current'; ?>"><a href="<?php echo base_url('Amount/withdrawal')?>">Withrawal</a></li>        
+        
+      </ul>
+    </li>
+    
+    
+    
     
      <li class="<?php if($active == 'branchs') echo 'current';  ?>"><a href="#Branch" class="users">Branch</a> <span class="arrow"></span>
       <ul id="Branch">
