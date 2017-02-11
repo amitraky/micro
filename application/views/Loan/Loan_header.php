@@ -56,8 +56,8 @@
     
     <div class="header">
     	<ul class="headermenu">
-        	<li class="current"><a href="<?php echo baseurl('admin/dashboard')?>"><span class="icon icon-flatscreen"></span>Dashboard</a></li>
-            <li><a href="<?php echo baseurl('loan/dashboard')?>"><span class="icon icon-chart"></span>Manage Loan</a></li>
+         <li ><a href="<?php echo baseurl('admin/dashboard')?>"><span class="icon icon-flatscreen"></span>Dashboard</a></li>
+          <li class="current" ><a href="<?php echo baseurl('loan/dashboard')?>" ><span class="icon icon-chart"></span>Manage Loan</a></li>
             <li><a href="messages.html"><span class="icon icon-message"></span>Messages</a></li>
         </ul>
         
@@ -65,11 +65,11 @@
         	<div class="earnings">
             	<div class="one_half">
                 	<h4>Today's Earnings</h4>
-                    <h2>$640.01</h2>
+                    <h2>$5.01</h2>
                 </div><!--one_half-->
                 <div class="one_half last alignright">
                 	<h4>Current Rate</h4>
-                    <h2>53%</h2>
+                    <h2>9%</h2>
                 </div><!--one_half last-->
             </div><!--earnings-->
         </div><!--headerwidget-->
