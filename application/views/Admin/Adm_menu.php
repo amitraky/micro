@@ -59,7 +59,9 @@
     <li class="<?php if($active == 'withdrawal' || $active == 'deposit'  ) echo 'current';  ?>"><a href="#Amount" class="elements">Amount</a> <span class="arrow"></span>
       <ul id="Amount">
        
-        <li class="<?php if($active == 'deposit') echo 'current'; ?>"><a href="<?php echo base_url('Amount/deposit')?>">Deposit</a></li> 
+        <li class="<?php if($active == 'deposit') echo 'current'; ?>"><a href="<?php echo base_url('Amount/deposit')?>">Deposit</a></li>
+        
+         
           <li class="<?php if($active == 'withdrawal') echo 'current'; ?>"><a href="<?php echo base_url('Amount/withdrawal')?>">Withrawal</a></li>        
         
       </ul>
