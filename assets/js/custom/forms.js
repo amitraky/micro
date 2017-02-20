@@ -156,6 +156,9 @@ jQuery(document).ready(function(){
 	});
 	
 	
+	
+	
+	
 	///// withdrawal  validation /////
 	jQuery("#Add_withdrawal").validate({
 		rules: {
@@ -175,6 +178,64 @@ jQuery(document).ready(function(){
 			
 		}
 	});
+	
+	///// Add new Saving Account validation /////
+	jQuery("#add_new_loan").validate({
+		rules: {
+			loan_type: "required",
+			min_amt: {required:true,min:1,number: true},
+			max_amt: {required:true,min:1,number: true},
+			duretion: "required",
+			pay_mode: "required",
+			interest_rate: "required",
+			install_cal: "required",
+		},
+		messages: {
+			loan_type: "Please Enter loan Type",
+			//min_amt: "Please Enter minimum 1 Amount",
+			//max_amt: "Please Enter max Amount",
+			duretion : "Please Enter Duretion",
+			pay_mode : "Please enter pay mode",
+			interest_rate : "Please Enter intrest rat",
+			install_cal : "Please Enter Instalment Cal. Method",
+		}
+	});
+	
+	
+	
+	///// Add new Saving Account validation /////
+	jQuery("#add_new_category").validate({
+		rules: {
+			name: "required",
+		},
+		messages: {
+			name : "Please Enter category Name",
+		}
+	});
+	
+	///// Add new Saving Account validation /////
+	jQuery("#add_new_type").validate({
+		rules: {
+			name: "required",
+		},
+		messages: {
+			name : "Please Enter category Name",
+		}
+	});
+	
+	///// Add new Saving Account validation /////
+	jQuery("#assign_loan").validate({
+		rules: {
+			name: "required",
+		},
+		messages: {
+			name : "Please Enter category Name",
+		}
+	});
+	
+	
+	
+	
 	
 	
 	

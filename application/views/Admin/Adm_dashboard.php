@@ -91,13 +91,131 @@
                         
                         <br clear="all" />
                         
-                        
+                        <div class="contenttitle2 nomargintop">
+                            <h3>Net Worth</h3>
+                        </div>
+                        <table cellpadding="0" cellspacing="0" border="0" class="stdtable overviewtable">
+                            <colgroup>
+                               
+                                <col class="con1" width="20%" />
+                                <col class="con0" width="20%" />
+                                <col class="con1" width="20%" />
+                                <col class="con0" width="20%" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="head1"><center>Income Today</center></th>
+                                    <th class="head1"><center>	Expense Today</center></th>
+                                    <th class="head0"><center>	Income This Month</center></th>
+                                    <th class="head0"><center>	Expense This Month</center></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                   
+                                    <td><center>800</center></td>
+                                    <td class="center"><center>500</center></td>
+                                    <td class="center"><center>300</center></td>
+                                     <td class="center"><center>300</center></td>
+                                </tr>
+                            </tbody>
+                        </table>
                         
                         <br />
+                         <br clear="all" />
                         
-                        <!-- widgetbox -->                            
+                        <div class="contenttitle2 nomargintop">
+                            <h3>Recent Invoices</h3>
+                        </div>
+                        <table cellpadding="0" cellspacing="0" border="0" class="stdtable overviewtable">
+                            <colgroup>
+                               
+                                <col class="con1" width="20%" />
+                                <col class="con0" width="20%" />
+                                <col class="con1" width="20%" />
+                                <col class="con0" width="20%" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="head1"><center>Account</center></th>
+                                    <th class="head1"><center>	Amount</center></th>
+                                    <th class="head0"><center>	Invoice Date</center></th>
+                                    <th class="head0"><center>	Due Date	</center></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                   
+                                    <td><center>#INV 1591</center></td>
+                                    <td class="center"><center>Odessa Grady</center></td>
+                                    <td class="center"><center>475.00</center></td>
+                                     <td class="center"><center>2016-11-19</center></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- widgetbox -->  
                         
+                         <br />
+                         <br clear="all" />
                         
+                        <div class="contenttitle2 nomargintop">
+                            <h3>Latest Income</h3>
+                        </div>
+                        <table cellpadding="0" cellspacing="0" border="0" class="stdtable overviewtable">
+                            <colgroup>
+                               
+                                <col class="con1" width="20%" />
+                                <col class="con0" width="20%" />
+                                <col class="con1" width="20%" />
+                                <col class="con0" width="20%" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="head1"><center>Date</center></th>
+                                    <th class="head1"><center>	Description</center></th>
+                                    <th class="head0"><center>	Amount</center></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                   
+                                    <td><center>2016-11-19</center></td>
+                                    <td class="center"><center>Invoice 1586 Payment</center></td>
+                                    <td class="center"><center>475.00</center></td>
+                                </tr>
+                            </tbody>
+                        </table>                          
+                        
+                         <br />
+                         <br clear="all" />
+                        
+                        <div class="contenttitle2 nomargintop">
+                            <h3>Latest Expense</h3>
+                        </div>
+                        <table cellpadding="0" cellspacing="0" border="0" class="stdtable overviewtable">
+                            <colgroup>
+                               
+                                <col class="con1" width="20%" />
+                                <col class="con0" width="20%" />
+                                <col class="con1" width="20%" />
+                                <col class="con0" width="20%" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="head1"><center>Date</center></th>
+                                    <th class="head1"><center>	Description</center></th>
+                                    <th class="head0"><center>	Amount</center></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                   
+                                    <td><center>2016-11-19</center></td>
+                                    <td class="center"><center>Miller PLC</center></td>
+                                    <td class="center"><center>500.00</center></td>
+                                </tr>
+                            </tbody>
+                        </table> 
                     </div> <!--two_third dashboard_left -->
                     
                     <div class="one_third last dashboard_right">

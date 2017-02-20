@@ -2,20 +2,20 @@
 <div class="vernav2 iconmenu">
   <ul>
   
-  <li class="<?php if($active == 'all_users'|| $active == 'active_users'||$active == 'deactive_users') echo 'current';  ?>"><a href="#Master" class="users">Master</a> <span class="arrow"></span>
+  <li class="<?php if($active == 'plan'|| $active == 'category'||$active == 'type') echo 'current';  ?>"><a href="#Master" class="users">Master</a> <span class="arrow"></span>
       <ul id="Master">
-        <li class="<?php if($active == 'account_saveing') echo 'current'; ?>"><a href="wizard.html">Plane</a></li>
-        <li class="<?php if($active == 'account_withdrawal') echo 'current'; ?>"><a href="editor.html">Category</a></li>
-        <li class="<?php if($active == 'account_withdrawal') echo 'current'; ?>"><a href="editor.html">Type</a></li>
+        <li class="<?php if($active == 'plan') echo 'current'; ?>"><a href="<?php echo baseurl('loan/plan')?>">Plane</a></li>
+        <li class="<?php if($active == 'category') echo 'current'; ?>"><a href="<?php echo baseurl('loan/category')?>">Category</a></li>
+        <li class="<?php if($active == 'type') echo 'current'; ?>"><a href="<?php echo baseurl('loan/type')?>">Type</a></li>
       </ul>
     </li>
     
     
   
-    <li class="<?php if($active == 'all_users'|| $active == 'active_users'||$active == 'deactive_users') echo 'current';  ?>"><a href="#loan" class="users">Loan</a> <span class="arrow"></span>
+    <li class="<?php if($active == 'assign'|| $active == 'pay_loan_amt') echo 'current';  ?>"><a href="#loan" class="users">Loan</a> <span class="arrow"></span>
       <ul id="loan">
-        <li class="<?php if($active == 'account_saveing') echo 'current'; ?>"><a href="wizard.html">Assign Loan</a></li>
-        <li class="<?php if($active == 'account_saveing') echo 'current'; ?>"><a href="wizard.html">View Assign Loan</a></li>
+        <li class="<?php if($active == 'assign') echo 'current'; ?>"><a href="<?php echo baseurl('loan/assign')?>">Assign Loan</a></li>
+        <li class="<?php if($active == 'loan_amt_credit') echo 'current'; ?>"><a href="<?php echo baseurl('loan/pay_loan_amt')?>">View Assign Loan</a></li>
         
       </ul>
     </li>

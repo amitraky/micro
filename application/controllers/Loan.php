@@ -111,100 +111,53 @@ class Loan extends CI_Controller {
 
 
 
+### MASTER ###		
+  public function plan()
+  {
+	 $this->data['page'] =   'Loan/Loan_plan';
+	 view('index',$this->data);   
+  
+  }
+  
+   public function category()
+  {
+	 $this->data['page'] =   'Loan/Loan_category';
+	 view('index',$this->data);   
+  
+  }
+  
+   public function type()
+  {
+	 $this->data['page'] =   'Loan/Loan_type';
+	 view('index',$this->data);   
+  
+  }
+		
+### END MASTER ###
+	
+   //dashboard page looking here
    public function dashboard()
-	{
+   {
 	     $this->data['page'] =   'Loan/Loan_dashboard';
 	     view('index',$this->data);  
-	}
-	
-	
-	
-	
+   }
+  
+   //assgign new loan plane to user
+   public function assign()
+   {
+       $this->data['page'] =   'Loan/Loan_assign';
+	   view('index',$this->data);  
+   
+   }
+   
+   // pay loan amount 
+   public function pay_loan_amt()
+   {
+     $this->data['page'] =   'Loan/Loan_pay';
+	 view('index',$this->data);  
+   }
 
-	
-
-
-	
-	
-	
-###FILE UPLOADS###
-	
-	  public function upload_file($f_name,$error_page,$f_type=null,$move_file='raw_upload') 
-	  { 
-	  
-	      if($f_type == 1)
-		  { 
-		    $type = 'gif|jpg|png|pdf|doc|xml';
-			//$config here
-		  }
-		  else
-		  { 
-		    $type = 'gif|jpg|png';
-			//$config here
-		  }
-		  
-		  $file_name = time().'.'.explode('.',$_FILES[$f_name]['name'])[1];
-		  $config['upload_path']   = "./assets/uploads/$move_file/"; 
-		  $config['allowed_types'] = $type;
-		  $config['file_name'] = $file_name;
-		  $config['overwrite'] = TRUE;
-		  $config['max_size'] = '0';
-		  $config['max_width']  = '0';
-		  $config['max_height']  = '0';
-		    
-          $this->load->library('upload',$config);
-		 
-			
-         if ( ! $this->upload->do_upload($f_name)) {
-                $error = $this->upload->display_errors();				
-		        $this->send_response_status(404,$error_page,$error);
-         }
-         else { 
-            return $this->upload->data(); 
-         } 
-      }
-	  
-	  public function resize_image($upload_data,$width=null,$height=null,$move_file)
-	  {
-	 
-		  $upload_data = $this->upload->data();
-		  $new_file_name = rand(0,9).$upload_data['file_name'];
-		  $config["image_library"] = "gd2";
-		  $config["source_image"] = $upload_data["full_path"];
-		  $config['create_thumb'] = FALSE;
-		  $config['maintain_ratio'] = FALSE;
-		  $config['new_image'] = $move_file . $new_file_name;
-		  $config['quality'] = "100%";
-		  $config['width'] = $width;
-		  $config['height'] = $height;
-		  $dim = (intval($upload_data["image_width"]) / intval($upload_data["image_height"])) - ($config['width'] / $config['height']);
-		  $config['master_dim'] = ($dim > 0)? "height" : "width";
-		  
-		  $this->load->library('image_lib');
-		  $this->image_lib->initialize($config);
-		  
-		  if(!$this->image_lib->resize()){ //Resize image
-		    return 0;
-		  }
-		  else
-		  {
-		    return $new_file_name;
-		  }
-	  }
-	
-	
-	public function delete_raw_file($path)
-	{
-	  $this->load->helper("file");
-      delete_files($path);
-	  unlink($path); 	
-	  return 1;
-	}
-	
-### END FILE ###	
-
-	
-
+   
 	
 	
 }
