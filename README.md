@@ -29,7 +29,7 @@ Micro Management
 *C. Database Configuration*
 	  **2. Table,View,SP Structer :**
 		 
-		 *Table* - Create Table first understanding of exists table structure like what's (t,m..)or (t1,m1..) in database where define on header part . 
+		 *Table* - Create Table first understanding of exists table structure like what's (t,m..)or (t1,m1..) in database where define on header part . where t represent  TRANSACTION and m represent MASTER  
 		 
 		 *SP*    -  Create SP first understanding of exists SP  structure.
 		 

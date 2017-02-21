@@ -5,14 +5,9 @@
     <div class="topheader">
         <div class="left">
            <?PHP echo SITE_NAME; ?>
-            <span class="slogan">admin template</span>
+            <span class="slogan">Admin Cpanel</span>
             
-            <div class="search">
-            	<form action="#" method="post">
-                	<input type="text" name="keyword" id="keyword" value="Enter keyword(s)" />
-                    <button class="submitbutton"></button>
-                </form>
-            </div><!--search-->
+            <!--search-->
             
             <br clear="all" />
             
