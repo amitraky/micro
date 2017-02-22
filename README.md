@@ -4,6 +4,11 @@ Micro
 Micro Management
 ----------------
 
+Working Users
+--------------------
+1. Amit..
+2. Aman..
+
 *Language  Configuration*
   
    **A. View Configuration**
@@ -34,6 +39,7 @@ Micro Management
 		 *SP*    -  Create SP first understanding of exists SP  structure.
 		 
 		 *View*  -  Create View first understanding of exists View structure.
+		 
 		 
 		
 	
