@@ -7,7 +7,6 @@ Micro Management
 Working Users
 --------------------
 1. Amit..
-2. Aman..
 
 *Language  Configuration*
   
